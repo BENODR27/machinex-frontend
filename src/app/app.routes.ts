@@ -14,7 +14,7 @@ export const routes: Routes = [
     path: 'dashboard',
     component: AdminLayout,
     loadChildren: () =>
-      import('./features/dashboard/dashboard-module').then((m) => m.DashboardModule),
+      import('./features/machinex/dashboard/dashboard-module').then((m) => m.DashboardModule),
     // canActivate: [TenantGuard],
   },
 
@@ -23,7 +23,7 @@ export const routes: Routes = [
     path: 'machines',
     component: AdminLayout,
 
-    loadChildren: () => import('./features/machines/machines-module').then((m) => m.MachinesModule),
+    loadChildren: () => import('./features/machinex/machines/machines-module').then((m) => m.MachinesModule),
     // canActivate: [RoleGuard],
     data: { roles: ['Admin', 'Supervisor'] },
   },
@@ -34,7 +34,7 @@ export const routes: Routes = [
     component: AdminLayout,
 
     loadChildren: () =>
-      import('./features/maintenance/maintenance-module').then((m) => m.MaintenanceModule),
+      import('./features/machinex/maintenance/maintenance-module').then((m) => m.MaintenanceModule),
     // canActivate: [RoleGuard],
     data: { roles: ['Admin', 'Technician', 'Supervisor'] },
   },
@@ -44,7 +44,7 @@ export const routes: Routes = [
     path: 'downtime',
     component: AdminLayout,
 
-    loadChildren: () => import('./features/downtime/downtime-module').then((m) => m.DowntimeModule),
+    loadChildren: () => import('./features/machinex/downtime/downtime-module').then((m) => m.DowntimeModule),
     // canActivate: [RoleGuard],
     data: { roles: ['Admin', 'Supervisor'] },
   },
@@ -55,7 +55,7 @@ export const routes: Routes = [
     component: AdminLayout,
 
     loadChildren: () =>
-      import('./features/inventory/inventory-module').then((m) => m.InventoryModule),
+      import('./features/machinex/inventory/inventory-module').then((m) => m.InventoryModule),
     // canActivate: [RoleGuard],
     data: { roles: ['Admin', 'InventoryManager'] },
   },
@@ -65,7 +65,7 @@ export const routes: Routes = [
     path: 'reports',
     component: AdminLayout,
 
-    loadChildren: () => import('./features/reports/reports-module').then((m) => m.ReportsModule),
+    loadChildren: () => import('./features/machinex/reports/reports-module').then((m) => m.ReportsModule),
     // canActivate: [RoleGuard],
     data: { roles: ['Admin', 'Supervisor', 'Manager'] },
   },

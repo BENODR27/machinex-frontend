@@ -26,7 +26,7 @@ const routes: Routes = [
         data: { roles: ['Admin', 'Supervisor', 'Technician'] },
       },
       {
-        path: 'settings',
+        path: 'org-settings',
         component: OrgSettingsComponent,
         // canActivate: [RoleGuard],
         data: { roles: ['Admin', 'Supervisor', 'Technician'] },
